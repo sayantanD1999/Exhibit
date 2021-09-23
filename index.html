@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -122,4 +122,119 @@
         </script>
 </body>
 
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla js slider</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .container {
+      height: 100vh;
+      display: inline-flex;
+      flex-direction: row;
+      overflow-x: hidden;
+      /* scroll-snap-type: x mandatory;
+      scroll-padding: 50%; */
+    }
+
+    img {
+      height: 90%;
+      width: 90%;
+      object-fit: contain;
+    }
+
+    .cards {
+      /* scroll-snap-align: center; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background-color: black;
+      height: 100%;
+      width: 100vw;
+      padding: 20px;
+      user-select: none;
+    }
+  </style>
+  <body>
+    <div class="container" ontouchmove="myFunction()">
+      <div class="cards">
+        <h1>Card 1</h1>
+        <img src="home.jpg" alt="" />
+      </div>
+      <div class="cards">
+        <h1>Card 2</h1>
+        <img src="home2.jpg" alt="" />
+      </div>
+      <div class="cards">
+        <h1>Card 3</h1>
+        <img src="home3.jpg" alt="" />
+      </div>
+      <div class="cards">
+        <h1>Card 4</h1>
+        <img src="gal5.jpg" alt="" />
+      </div>
+    </div>
+
+    <script>
+     function myFunction(){
+       console.log("hello");
+     }
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p><button>Share MDN!</button></p>
+    <p class="result"></p>
+
+    <script>
+
+      const btn = document.querySelector("button");
+
+      const title = window.document.title;
+      const url = window.document.location.href;
+
+      // Share must be triggered by "user activation"
+      btn.addEventListener("click", () => {
+        if (navigate.share) {
+          navigator
+            .share({
+              title: `${title}`,
+              url: `${url}`,
+            })
+            .then(() => {
+              console.log("done");
+            })
+            .catch(console.log("error"));
+        } else {
+        }
+      });
+    </script>
+  </body>
 </html>
